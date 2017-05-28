@@ -7,5 +7,6 @@
  */
 
 spl_autoload_register(function($className){
-
+  $className = preg_replace('/\\\/', DIRECTORY_SEPARATOR, $className);
+  require_once strtolower($className) . '.php';
 });

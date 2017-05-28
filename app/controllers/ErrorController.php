@@ -6,6 +6,10 @@
  * Date: 5/28/17
  * Time: 9:20 AM
  */
+namespace App\Controllers;
+
+use App\Core\Controller;
+
 class ErrorController extends Controller
 {
 
