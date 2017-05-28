@@ -1,16 +1,16 @@
 <?php
 
-class Controller
+abstract class Controller
 {
 
-  protected function model($model)
-  {
+  protected $view;
 
+  public function __construct()
+  {
+    echo 'Main controller<br>';
+    $this->view = new View;
   }
 
-  protected function view($view, $data=[])
-  {
-    
-  }
+  abstract public function index();
 
 }
