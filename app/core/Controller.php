@@ -1,16 +1,17 @@
 <?php
 
-class Controller
+namespace App\Core;
+
+abstract class Controller
 {
 
-  protected function model($model)
-  {
+  protected $view;
 
+  public function __construct()
+  {
+    $this->view = new View;
   }
 
-  protected function view($view, $data=[])
-  {
-    
-  }
+  abstract public function index();
 
 }

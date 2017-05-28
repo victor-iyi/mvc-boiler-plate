@@ -1,8 +1,10 @@
 <?php
 
+namespace App\Core;
+
 class App
 {
-  protected $controller = 'Home';
+  protected $controller = 'home';
   protected $method = 'index';
   protected $args = [];
 
@@ -10,12 +12,13 @@ class App
   {
     $url = $this->__parseURL();
     // controller
-    if ( file_exists('app/controllers/' . ucfirst($url[0]) . 'Controller.php') ) {
-      $this->controller = ucfirst($url[0]);
+    if ( file_exists(APP_ROOT . 'controllers/' . ucfirst($url[0]) . 'Controller.php') ) {
+      $this->controller = $url[0];
       unset($url[0]);
-    }    
-    $this->controller = $this->controller . 'Controller';
-    require_once 'app/controllers/' . $this->controller . '.php';
+    }
+    $this->controller = ucfirst($this->controller) . 'Controller';
+    require_once APP_ROOT . 'controllers/' . $this->controller . '.php';
+    $this->controller = 'App\Controllers\\' . $this->controller;
     $this->controller = new $this->controller;
 
     // method

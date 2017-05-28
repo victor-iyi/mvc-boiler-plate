@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class Database
 {
 
@@ -10,11 +12,11 @@ class Database
   public function __construct()
   {
     try {
-      $this->conn = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',
+      $this->conn = new \PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',
         DB_USERNAME, DB_PASSWORD);
-      $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
       $this->success = true;
-    } catch ( PDOException $e ) {
+    } catch ( \PDOException $e ) {
       $this->success = false;
       $this->status = $e->getMessage();
     }
@@ -27,7 +29,7 @@ class Database
       if ( $bindings ) $stmt->execute($bindings);
       else $stmt->execute();
       return $stmt;
-    } catch ( PDOException $e ) {
+    } catch ( \PDOException $e ) {
       return false;
     }
   }
