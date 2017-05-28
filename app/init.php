@@ -7,6 +7,7 @@
  * Time: 12:52 PM
  */
 
-require_once 'app/lib/config.php';
+require_once 'app/lib/config/paths.php';
+require_once 'app/lib/config/database.php';
 require_once 'app/lib/helpers/functions.php';
 require_once 'app/lib/helpers/__autoloader.php';

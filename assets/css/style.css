@@ -1,3 +1,76 @@
 body {
-  font-family: Georgia;
+  font-family: Georgia, sans-serif;
+  margin: 0;
+}
+
+a { text-decoration: none; }
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  outline: none;
+}
+/*
+  navbar
+*/
+nav {
+  background: silver;
+  overflow: hidden;
+}
+
+nav li {
+  display: inline;
+  padding: 20px 40px;
+  float: left;
+}
+
+nav li a {  color: #FFFFFF;  }
+
+nav li a:hover {  color: #0A0A0A;  }
+
+/*
+  Container
+*/
+.container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+/*
+  Login
+*/
+
+.form ul, .form li {
+  padding: 0;
+  margin: 0;
+}
+
+.form li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.form label {  display: block;  }
+
+.form input {
+  padding: 8px;
+  width: 25%;
+}
+
+.form input[type=submit] {  box-sizing: content-box;  }
+
+
+/*
+  Footer
+*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding:15px;
+  background: silver;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.footer p {
+  text-align: center;
+  font-size: 14px;
 }

@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Core;
 
 class App
@@ -12,12 +13,12 @@ class App
   {
     $url = $this->__parseURL();
     // controller
-    if ( file_exists(APP_ROOT . 'controllers/' . ucfirst($url[0]) . 'Controller.php') ) {
+    if ( file_exists(DOC_ROOT . APP_ROOT . 'controllers/' . ucfirst($url[0]) . 'Controller.php') ) {
       $this->controller = $url[0];
       unset($url[0]);
     }
     $this->controller = ucfirst($this->controller) . 'Controller';
-    require_once APP_ROOT . 'controllers/' . $this->controller . '.php';
+//    require_once APP_ROOT . 'controllers/' . $this->controller . '.php';
     $this->controller = 'App\Controllers\\' . $this->controller;
     $this->controller = new $this->controller;
 

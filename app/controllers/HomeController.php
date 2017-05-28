@@ -9,13 +9,26 @@ class HomeController extends Controller
 
   public function __construct()
   {
-
     parent::__construct();
   }
 
-  public function index($args=[])
+  public function index()
   {
-    require_once APP_ROOT . 'models/HomeModel.php';
-    $this->view->render('home/index', ['args' => $args, 'title'=>'HomeController']);
+    $this->view->render('home/index');
+  }
+
+  public function login()
+  {
+    $this->view->render('home/login');
+  }
+
+  public function register()
+  {
+    $this->view->render('home/register');
+  }
+
+  public function logout()
+  {
+
   }
 }
