@@ -11,6 +11,7 @@
     <nav>
       <ul>
         <li> <a href="<?= PROJECT_PATH; ?>">Home</a> </li>
+        <li> <a href="<?= PROJECT_PATH; ?>dashboard">Dashboard</a> </li>
         <li> <a href="<?= PROJECT_PATH; ?>about">About</a> </li>
         <li> <a href="<?= PROJECT_PATH; ?>login">Login</a> </li>
         <li> <a href="<?= PROJECT_PATH; ?>register">Register</a> </li>

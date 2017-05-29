@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: victor
@@ -6,7 +7,7 @@
  * Time: 8:18 PM
  */
 
-namespace app\controllers;
+namespace App\Controllers;
 
 
 use App\Core\Controller;
