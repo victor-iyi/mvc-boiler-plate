@@ -9,13 +9,18 @@
 
 namespace App\Core;
 
+use App\Lib\Session;
+
+/**
+ * @property string title
+ * @property string status
+ * @property array js
+ */
 class View
 {
-  public $js = [];
-
   public function __construct()
   {
-    $this->title = "MVC";
+    $this->loggedIn = Session::get("loggedIn");
   }
 
   public function render($name)

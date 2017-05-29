@@ -18,9 +18,12 @@ class LoginModel extends Model
     parent::__construct();
   }
 
-  public function userLogin()
+  public function userLogin( $credentials )
   {
-
+    $userModel = new UserModel;
+    $userModel->username = $credentials['username'];
+    $userModel->password = $credentials['password'];
+    return $userModel->login();
   }
 
   public function adminLogin()

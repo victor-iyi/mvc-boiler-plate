@@ -3,23 +3,21 @@
  * Created by PhpStorm.
  * User: victor
  * Date: 5/29/17
- * Time: 8:31 AM
+ * Time: 11:48 AM
  */
 
-namespace App\Controllers;
+namespace App\Models;
 
 
-use App\Core\Controller;
-use App\Models\UserModel;
+use App\Core\Model;
 
-class LogoutController extends Controller
+class LogoutModel extends Model
 {
 
   public function __construct()
-  { parent::__construct();  }
-
-  public function index()
-  { $this->user();  }
+  {
+    parent::__construct();
+  }
 
   public function user()
   {
@@ -29,6 +27,8 @@ class LogoutController extends Controller
 
   public function admin()
   {
-
+    $adminModel = new AdminModel;
+    $adminModel->logout();
   }
+
 }

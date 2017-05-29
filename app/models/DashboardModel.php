@@ -7,7 +7,7 @@
  * Time: 8:36 AM
  */
 
-namespace Aapp\Models;
+namespace App\Models;
 
 
 use App\Core\Model;

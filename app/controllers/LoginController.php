@@ -28,8 +28,16 @@ class LoginController extends Controller
   public function user()
   {
     if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-      $loginModel = new LoginModel;
-      $loginModel->userLogin();
+      // check empty filed
+      if ( isset($_POST['username']) && !empty($_POST['username']) ) {
+        if ( isset($_POST['password']) && !empty($_POST['password']) ) {
+          $loginModel = new LoginModel;
+          if ( $loginModel->userLogin($_POST) )
+            header("Location: " . PROJECT_PATH . "dashboard");
+          else
+            $this->view->status = "Could not log this user in.";
+        } else $this->view->status = "Please fill in your password";
+      } else $this->view->status = "Please fill in your username";
     }
     $this->view->render('login/user');
   }
