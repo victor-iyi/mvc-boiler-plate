@@ -18,8 +18,14 @@ class LoginModel extends Model
     parent::__construct();
   }
 
-  public function user()
+  public function userLogin()
   {
+
+  }
+
+  public function adminLogin()
+  {
+
   }
 
 }

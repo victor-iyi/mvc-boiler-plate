@@ -11,15 +11,14 @@ namespace App\Core;
 
 class View
 {
-
   public function __construct()
   {
+    $this->title = "MVC Boiler Plate";
   }
 
-  public function render($name, $data=[])
+  public function render($name)
   {
     $viewFile = 'app/views/' . $name . '.php';
-    extract($data);
     if ( file_exists($viewFile) )
       require_once 'app/views/layout.php';
   }

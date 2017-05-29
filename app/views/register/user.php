@@ -18,7 +18,10 @@
       <input type="password" name="password" id="password" value="<?= old('password'); ?>">
     </li>
     <li>
-      <input type="submit" value="Sign up">
+      <input type="submit" value="Sign up" class="btn btn-outline-secondary">
     </li>
   </ul>
+  <?php if ( isset($this->status) ): ?>
+    <p class="error"><?= $this->status; ?></p>
+  <?php endif; ?>
 </form>

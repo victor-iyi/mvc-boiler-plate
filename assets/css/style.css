@@ -1,26 +1,25 @@
-body {
-  font-family: Georgia, sans-serif;
-  margin: 0;
+body {  font-family: Georgia, sans-serif;  }
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {  outline: none;  }
+
+a, a:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
 
-a { text-decoration: none; }
-
-input[type=text]:focus, input[type=password]:focus, textarea:focus {
-  outline: none;
-}
+nav, footer {  background: silver;  }
 
 .error {
-  font-size: 14px;
   font-style: italic;
   color: red;
 }
+
+.error, footer p {  font-size: 14px;  }
+
 /*
   navbar
 */
-nav {
-  background: silver;
-  overflow: hidden;
-}
+nav {  overflow: hidden;  }
 
 nav li {
   display: inline;
@@ -35,10 +34,7 @@ nav li a:hover {  color: #0A0A0A;  }
 /*
   Container
 */
-.container {
-  width: 90%;
-  margin: 20px auto;
-}
+.container {  margin: 20px auto;  }
 
 /*
   Login
@@ -57,12 +53,9 @@ nav li a:hover {  color: #0A0A0A;  }
 .form label {  display: block;  }
 
 .form input {
-  padding: 8px;
+  padding: 4px;
   width: 25%;
 }
-
-.form input[type=submit] {  box-sizing: content-box;  }
-
 
 /*
   Footer
@@ -71,12 +64,8 @@ nav li a:hover {  color: #0A0A0A;  }
   position: absolute;
   bottom: 0;
   padding:15px;
-  background: silver;
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
 }
 
-.footer p {
-  text-align: center;
-  font-size: 14px;
-}
+.footer p {  text-align: center;  }

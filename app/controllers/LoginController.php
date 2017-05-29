@@ -11,13 +11,16 @@ namespace App\Controllers;
 
 
 use App\Core\Controller;
-use App\Models\UserModel;
+use App\Models\LoginModel;
 
 class LoginController extends Controller
 {
 
   public function __construct()
-  { parent::__construct();  }
+  {
+    parent::__construct();
+    $this->view->title = "Login";
+  }
 
   public function index()
   { $this->user();  }
@@ -25,8 +28,8 @@ class LoginController extends Controller
   public function user()
   {
     if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-      $userModel = new UserModel();
-
+      $loginModel = new LoginModel;
+      $loginModel->userLogin();
     }
     $this->view->render('login/user');
   }

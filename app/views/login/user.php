@@ -10,7 +10,7 @@
       <input type="password" name="password" id="password" value="<?= old('password'); ?>">
     </li>
     <li>
-      <input type="submit" value="Login">
+      <input type="submit" value="Login" class="btn btn-outline-secondary">
     </li>
   </ul>
   <?php if ( isset($this->status) ): ?>
