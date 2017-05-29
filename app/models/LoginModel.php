@@ -20,9 +20,7 @@ class LoginModel extends Model
 
   public function userLogin( $credentials )
   {
-    $userModel = new UserModel;
-    $userModel->username = $credentials['username'];
-    $userModel->password = $credentials['password'];
+    $userModel = new UserModel($credentials);
     return $userModel->login();
   }
 

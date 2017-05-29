@@ -18,6 +18,7 @@ use App\Lib\Session;
  */
 class View
 {
+
   public function __construct()
   {
     $this->loggedIn = Session::get("loggedIn");

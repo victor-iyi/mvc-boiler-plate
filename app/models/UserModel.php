@@ -15,14 +15,21 @@ use App\Lib\Session;
 class UserModel extends Model
 {
 
+  public $id;
   public $username;
   public $password;
-  public $userTableName;
+  public $firstName;
+  public $lastName;
+  private $userTableName;
 
-  public function __construct()
+  public function __construct($data)
   {
     parent::__construct();
     $this->userTableName = "users";
+    if ( !empty($data) )
+      foreach ( $data as $key => $value )
+        if ( !empty($value) )
+          $this->{$key} = $value;
   }
 
   public function login()
