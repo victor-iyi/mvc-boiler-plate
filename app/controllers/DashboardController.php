@@ -9,7 +9,19 @@
 namespace app\controllers;
 
 
-class DashboardController
+use App\Core\Controller;
+
+class DashboardController extends Controller
 {
 
+  public function __construct()
+  {
+    parent::__construct();
+    $this->view->js = ['dashboard/js/default.js'];
+  }
+
+  public function index()
+  {
+    $this->view->render("dashboard/index");
+  }
 }

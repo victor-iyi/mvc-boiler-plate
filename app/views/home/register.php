@@ -15,7 +15,7 @@
     </li>
     <li>
       <label for="password">Password</label>
-      <input type="text" name="password" id="password" value="<?= old('password'); ?>">
+      <input type="password" name="password" id="password" value="<?= old('password'); ?>">
     </li>
     <li>
       <input type="submit" value="Sign up">

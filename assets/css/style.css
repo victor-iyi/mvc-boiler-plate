@@ -8,6 +8,12 @@ a { text-decoration: none; }
 input[type=text]:focus, input[type=password]:focus, textarea:focus {
   outline: none;
 }
+
+.error {
+  font-size: 14px;
+  font-style: italic;
+  color: red;
+}
 /*
   navbar
 */

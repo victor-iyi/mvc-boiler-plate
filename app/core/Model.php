@@ -8,7 +8,8 @@
  */
 namespace App\Core;
 
-use App\Models\Database;
+
+use App\Lib\Database;
 
 class Model
 {

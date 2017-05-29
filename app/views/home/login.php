@@ -7,10 +7,13 @@
     </li>
     <li>
       <label for="password">Password: </label>
-      <input type="text" name="password" id="password" value="<?= old('password'); ?>">
+      <input type="password" name="password" id="password" value="<?= old('password'); ?>">
     </li>
     <li>
       <input type="submit" value="Login">
     </li>
   </ul>
+  <?php if ( isset($this->status) ): ?>
+    <p class="error"> <?= $this->status; ?></p>
+  <?php endif; ?>
 </form>
