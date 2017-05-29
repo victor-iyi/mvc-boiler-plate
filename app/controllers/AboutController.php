@@ -16,7 +16,10 @@ class AboutController extends Controller
 {
 
   public function __construct()
-  { parent::__construct();  }
+  {
+    parent::__construct();
+    $this->view->title = "About us";
+  }
 
   public function index()
   {
@@ -25,11 +28,14 @@ class AboutController extends Controller
 
   public function company()
   {
+    $this->view->title = "About the Company";
     $this->view->render('about/company');
+
   }
 
   public function products()
   {
+    $this->view->title = "About our Products";
     $this->view->render('about/products');
   }
 

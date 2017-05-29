@@ -11,9 +11,11 @@ namespace App\Core;
 
 class View
 {
+  public $js = [];
+
   public function __construct()
   {
-    $this->title = "MVC Boiler Plate";
+    $this->title = "MVC";
   }
 
   public function render($name)

@@ -36,6 +36,7 @@ class LoginController extends Controller
 
   public function admin()
   {
+    $this->view->title = "Admin Login";
     $this->view->render('login/admin');
   }
 }

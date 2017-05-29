@@ -18,6 +18,7 @@ class DashboardController extends Controller
   public function __construct()
   {
     parent::__construct();
+    $this->view->title = "Dashboard";
     $this->view->js = ['dashboard/js/default.js'];
   }
 

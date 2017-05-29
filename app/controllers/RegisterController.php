@@ -15,7 +15,10 @@ class RegisterController extends Controller
 {
 
   public function __construct()
-  { parent::__construct();  }
+  {
+    parent::__construct();
+    $this->view->title = "Register";
+  }
 
   public function index()
   { $this->user();  }
@@ -27,6 +30,7 @@ class RegisterController extends Controller
 
   public function admin()
   {
+    $this->view->title = 'Admin Registration';
     $this->view->render('register/admin');
   }
 
