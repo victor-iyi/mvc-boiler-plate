@@ -19,4 +19,16 @@ class RegisterModel extends Model
     parent::__construct();
   }
 
+  public function userRegister( $credentials )
+  {
+    $user = new UserModel($credentials);
+    return $user->register();
+  }
+
+  public function adminRegister( $credentials )
+  {
+    $admin = new AdminModel( $credentials );
+    $admin->register();
+  }
+
 }

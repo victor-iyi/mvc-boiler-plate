@@ -38,7 +38,8 @@ class Database
   {
     $keys = implode(', ', array_keys($bindings));
     $named_param = ':' . implode(', :', array_keys($bindings));
-    return $this->query("INSERT INTO $table ($keys) VALUES ($named_param)", $bindings);
+    $result = $this->query("INSERT INTO {$table} ($keys) VALUES ($named_param)", $bindings);
+    return $result ? (int)$this->conn->lastInsertId() : $result;
   }
 
   public function getStatusMessage()

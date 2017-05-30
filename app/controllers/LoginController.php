@@ -37,12 +37,12 @@ class LoginController extends Controller
             $this->view->status = "Incorrect credentials, please try again.";
         } else $this->view->status = "Please fill in all credentials";
     }
-    $this->view->render('login/user');
+    $this->view->render('user/login');
   }
 
   public function admin()
   {
     $this->view->title = "Admin Login";
-    $this->view->render('login/admin');
+    $this->view->render('admin/login');
   }
 }

@@ -24,9 +24,10 @@ class LoginModel extends Model
     return $userModel->login();
   }
 
-  public function adminLogin()
+  public function adminLogin( $credentials )
   {
-
+    $adminModel = new AdminModel( $credentials );
+    return $adminModel->login();
   }
 
 }

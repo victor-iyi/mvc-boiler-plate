@@ -18,11 +18,11 @@ class UserModel extends Model
   public $id;
   public $username;
   public $password;
-  public $firstName;
-  public $lastName;
+  public $firstname;
+  public $lastname;
   private $userTableName;
 
-  public function __construct($data)
+  public function __construct($data=null)
   {
     parent::__construct();
     $this->userTableName = "users";
@@ -40,6 +40,20 @@ class UserModel extends Model
     }
     return false;
   }
+
+  public function register()
+  {
+    if ( !$this->userExists() ) {
+      $insertId = $this->db->insert($this->userTableName, ["firstname"=>$this->firstname, "lastname"=>$this->lastname,
+          "username"=>$this->username, "password"=>password_hash($this->password, PASSWORD_BCRYPT)]);
+      if ( $insertId ) {
+        $this->id = $insertId;
+        return true;
+      }
+    }
+    return false;
+  }
+
 
   public function logout($redirect="")
   {

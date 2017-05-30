@@ -10,6 +10,7 @@ namespace App\Controllers;
 
 
 use App\Core\Controller;
+use App\Models\AdminModel;
 use App\Models\UserModel;
 
 class LogoutController extends Controller
@@ -29,6 +30,7 @@ class LogoutController extends Controller
 
   public function admin()
   {
-
+    $adminModel = new AdminModel;
+    $adminModel->logout();
   }
 }

@@ -1,4 +1,4 @@
-<h3> Registration Form </h3>
+<h3> Admin Registration Form </h3>
 <form action="" method="POST" class="form">
   <ul>
     <li>
@@ -24,4 +24,5 @@
   <?php if ( isset($this->status) ): ?>
     <p class="error"><?= $this->status; ?></p>
   <?php endif; ?>
+  <a href="<?= PROJECT_PATH ?>register"> Go to User Register </a>
 </form>
