@@ -19,8 +19,9 @@ class ErrorController extends Controller
     $this->view->title = "Error";
   }
 
-  public function index($type=null)
+  public function index($type=null, $status="")
   {
+    $this->view->status = $status;
     switch ( $type ) {
       case 404:
         $this->view->render('error/404');

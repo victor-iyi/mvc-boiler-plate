@@ -3,11 +3,11 @@
   <ul>
     <li>
       <label for="username">Username: </label>
-      <input type="text" name="username" id="username" value="<?= old('username'); ?>">
+      <input type="text" name="username" id="username" value="<?= preserveInputs('username'); ?>">
     </li>
     <li>
       <label for="password">Password: </label>
-      <input type="password" name="password" id="password" value="<?= old('password'); ?>">
+      <input type="password" name="password" id="password" value="<?= preserveInputs('password'); ?>">
     </li>
     <li>
       <input type="submit" value="Login" class="btn btn-outline-secondary">

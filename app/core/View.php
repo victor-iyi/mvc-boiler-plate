@@ -19,9 +19,14 @@ use App\Lib\Session;
 class View
 {
 
+  protected $header;
+  protected $footer;
+
   public function __construct()
   {
     $this->loggedIn = Session::get("loggedIn");
+    $this->header = '_includes/_header.php';
+    $this->footer = '_includes/_footer.php';
   }
 
   public function render($name)

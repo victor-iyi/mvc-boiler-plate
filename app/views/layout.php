@@ -1,7 +1,7 @@
-<?php require '_includes/_header.php'; ?>
+<?php require $this->header; ?>
   <div class="container">
 
     <?php require_once $viewFile;  ?>
 
   </div>
-<?php require '_includes/_footer.php'; ?>
+<?php require $this->footer; ?>

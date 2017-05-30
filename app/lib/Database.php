@@ -2,6 +2,8 @@
 
 namespace App\Lib;
 
+use App\Controllers\ErrorController;
+
 class Database
 {
 
@@ -17,8 +19,9 @@ class Database
       $this->conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
       $this->success = true;
     } catch ( \PDOException $e ) {
-      $this->success = false;
-      $this->status = $e->getMessage();
+      $err = new ErrorController;
+      $err->index("500", $e->getMessage());
+      die();
     }
   }
 
