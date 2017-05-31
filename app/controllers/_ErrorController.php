@@ -10,7 +10,7 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 
-class ErrorController extends Controller
+class _ErrorController extends Controller
 {
 
   public function __construct()
